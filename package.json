@@ -1,0 +1,32 @@
+{
+  "name": "express-react-boilerplate",
+  "version": "1.0.0",
+  "description": "boiler plate node + react app",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "nodemon NODE_ENV=dev node app.js",
+    "start:test": "NODE_ENV=test node app.js",
+    "start:prod": "NODE_ENV=prod node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier es5 --single-quote --write '**/*.js'",
+    "format-check": "prettier-check es5 --single-quote --write '**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digvijayu/express-react-boilerplate.git"
+  },
+  "author": "Digvijay Upadhyay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digvijayu/express-react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/digvijayu/express-react-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "prettier": "^1.15.2",
+    "prettier-check": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.6"
+  }
+}

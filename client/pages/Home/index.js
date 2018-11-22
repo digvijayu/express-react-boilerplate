@@ -8,7 +8,9 @@ import Text from './../../components/Text';
 class Page extends Component {
   render() {
     return (
-      <div><Text>Home.Page.Name</Text></div>
+      <div>
+        <Text>Home.Page.Name</Text>
+      </div>
     );
   }
 }

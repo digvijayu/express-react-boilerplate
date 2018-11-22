@@ -16,7 +16,7 @@ import { ROUTES, DEFAULT_LANGUAGE } from './utils/constants';
 import { isSupportedLanguage } from './utils';
 import Home from './pages/Home';
 import Page from './pages/Page';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const messages = {
   de: messages_de,
@@ -39,7 +39,7 @@ class App extends Component {
             <HashRouter>
               <main className="h-100">
                 <Link to={ROUTES.home}>Home</Link>
-                <br/>
+                <br />
                 <Link to={ROUTES.page}>Page</Link>
                 <Switch>
                   <Route exact path={ROUTES.home} component={Home} />

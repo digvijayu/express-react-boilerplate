@@ -1,19 +1,12 @@
 import { defaultPalette } from './../constants/vars';
 
-let defaultStyle = {
-};
+let defaultStyle = {};
 
-let disabledButtonStyle = {
+let disabledButtonStyle = {};
 
-};
+const lightBorderButtonStyle = {};
 
-const lightBorderButtonStyle = {
-
-};
-
-const buttonTransparentStyle = {
-
-};
+const buttonTransparentStyle = {};
 
 export let buttonStyle = theme => ({ ...defaultStyle, ...theme.button });
 export let buttonDisabledStyle = theme => ({

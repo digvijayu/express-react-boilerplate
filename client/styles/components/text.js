@@ -1,16 +1,10 @@
 import { defaultPalette } from './../constants/vars';
 
-let defaultTextLight = {
+let defaultTextLight = {};
 
-};
+let defaultSoftError = {};
 
-let defaultSoftError = {
-
-};
-
-let defaultHardError = {
-  
-};
+let defaultHardError = {};
 
 export let textLightStyle = theme => ({
   ...defaultTextLight,

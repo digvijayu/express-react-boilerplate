@@ -1,12 +1,8 @@
 import { defaultPalette } from './../constants/vars';
 
-let defaultStyle = {
+let defaultStyle = {};
 
-};
-
-let infoPanelDefaultStyle = {
-  
-};
+let infoPanelDefaultStyle = {};
 
 export let panelStyle = theme => ({ ...defaultStyle, ...theme.panel });
 export let infoPanelStyle = theme => ({

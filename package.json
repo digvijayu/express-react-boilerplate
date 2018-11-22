@@ -10,8 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier es5 --single-quote --write '**/*.js'",
     "format-check": "prettier-check es5 --single-quote --write '**/*.js'",
-    "watch": "webpack --mode development --watch",
-    "build": "webpack --mode development"
+    "react:watch": "webpack --mode development --watch",
+    "react:build": "webpack --mode development",
+    "dev-env": "npm-run-all --parallel start:dev react:watch"
   },
   "repository": {
     "type": "git",
@@ -66,6 +67,7 @@
     "setupTestFrameworkScriptFile": "<rootDir>/tests/config.js"
   },
   "devDependencies": {
-    "nodemon": "^1.18.6"
+    "nodemon": "^1.18.6",
+    "npm-run-all": "^4.1.3"
   }
 }

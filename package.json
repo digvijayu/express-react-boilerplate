@@ -9,7 +9,9 @@
     "start:prod": "NODE_ENV=prod node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier es5 --single-quote --write '**/*.js'",
-    "format-check": "prettier-check es5 --single-quote --write '**/*.js'"
+    "format-check": "prettier-check es5 --single-quote --write '**/*.js'",
+    "watch": "webpack --mode development --watch",
+    "build": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -22,14 +24,46 @@
   },
   "homepage": "https://github.com/digvijayu/express-react-boilerplate#readme",
   "dependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@callstack/react-theme-provider": "^1.0.7",
+    "axios": "^0.18.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "chai": "^4.2.0",
+    "css-loader": "^1.0.1",
     "dotenv": "^6.1.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "express": "^4.16.4",
     "express-status-monitor": "^1.2.3",
+    "jest": "^23.6.0",
+    "node-sass": "^4.10.0",
     "pino": "^5.8.1",
     "pino-pretty": "^2.2.4",
     "prettier": "^1.15.2",
     "prettier-check": "^2.0.0",
-    "request": "^2.88.0"
+    "react": "^16.6.3",
+    "react-addons-test-utils": "^15.6.2",
+    "react-dom": "^16.6.3",
+    "react-intl": "^2.7.2",
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-mock-store": "^1.5.3",
+    "request": "^2.88.0",
+    "sass-loader": "^7.1.0",
+    "sinon": "^7.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/config.js"
   },
   "devDependencies": {
     "nodemon": "^1.18.6"

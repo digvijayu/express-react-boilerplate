@@ -1,23 +1,18 @@
-const dev = require('./../config/dev');
-const test = require('./../config/test');
-const prod = require('./../config/prod');
 const CONST = require('./../constants');
 
 const getEnvironmentVariable = () =>
   process.env.NODE_ENV || CONST.DEFAULT_NODE_ENV;
 exports.getEnvironmentVariable = getEnvironmentVariable;
 
-exports.getEnvironmentVariableValue = key => process.env[key];
-
-exports.getEnvironmentVariableFromConfig = key => {
+exports.getEnvironmentVariableFilePath = () => {
   const envVar = getEnvironmentVariable();
   switch (envVar) {
     case 'dev':
-      return dev[key];
+      return '.env-dev';
     case 'test':
-      return test[key];
+      return '.env-test';
     case 'prod':
-      return prod[key];
+      return '.env-prod';
     default:
       return null;
   }

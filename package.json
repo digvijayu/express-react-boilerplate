@@ -15,7 +15,7 @@
     "dev-env": "npm-run-all --parallel start:dev react:watch",
     "test:server": "npm run format-check && ava server/tests/* --verbose",
     "test:client": "npm run format-check && ava client/tests/**/*.test.js --verbose",
-    "test:client:watch": "npm run format-check && jest --testPathPattern './client/tests/.*' --watch --coverage",
+    "test:client:watch": "npm run format-check && ava client/tests/**/*.test.js --verbose --watch --coverage",
     "coverage": "nyc npm run test:server"
   },
   "repository": {

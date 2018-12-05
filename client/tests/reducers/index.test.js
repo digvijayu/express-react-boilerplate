@@ -13,10 +13,28 @@ test('should verify the initial state', t => {
 });
 
 test('should reduce the application error action', t => {
-  const newState = appReducer(initialAppState, appError('Some Message'));
+  const newState = appReducer();
   t.deepEqual(newState, {
     error: {
-      message: 'Some Message'
+      message: ''
+    },
+    serverUrl: 'null'
+  });
+});
+
+test('should reduce the application error action with custom state', t => {
+  const newState = appReducer(
+    {
+      error: {
+        message: 'Some'
+      },
+      serverUrl: window.location.origin
+    },
+    appError('Some Message 1')
+  );
+  t.deepEqual(newState, {
+    error: {
+      message: 'Some Message 1'
     },
     serverUrl: window.location.origin
   });

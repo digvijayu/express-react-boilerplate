@@ -7,7 +7,10 @@ export const initialAppState = {
   serverUrl: window.location.origin
 };
 
-export const appReducer = (state = initialAppState, action) => {
+export const appReducer = (
+  state = initialAppState,
+  action = { type: 'NO_TYPE' }
+) => {
   switch (action.type) {
     case 'APPLICATION_ERROR':
       return {

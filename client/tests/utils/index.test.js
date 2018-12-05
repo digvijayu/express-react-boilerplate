@@ -1,6 +1,5 @@
 import test from 'ava';
 import { getImageUrl, isSupportedLanguage } from './../../utils';
-import { getOriginUrl } from './../helpers';
 
 test('should generate proper image url when url is not provided', t => {
   let inputs = ['/image/url', '/different/asset/path'];

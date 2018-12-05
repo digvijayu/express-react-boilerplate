@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { withTheme } from './../../styles/Theme';
 import { appError } from './../../actions';
-import { withRouter } from 'react-router-dom';
 import Text from './../../components/Text';
 
 class Page extends Component {
